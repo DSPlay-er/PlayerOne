@@ -4,7 +4,7 @@ var nameApp = 'DS Play-er';
 	
 	var link_telegram = 'https://t.me/DSPlay_er';
 	var link_facebook = '';
-	var link_app = 'link_app'
+	var link_app = 'https://bit.ly/DSPlay-erOneOfficialApk'
 	
 	var main_name = nameApp + '『』';
 	var main_text_connector = 'poderoso';
