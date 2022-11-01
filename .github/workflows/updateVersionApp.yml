@@ -8,9 +8,11 @@
 name: Update Version App
 
 on:
+  #push:
+  #  paths:
+  #    - 'app-release.apk'
   push:
-    paths:
-      - 'app-release.apk'
+    branches: [ "main" ]
 
   
 env:
@@ -18,8 +20,8 @@ env:
   DIRECTORY_TO_DELETE: deleter 
   BRANCH: main
   MESSAGE: Testing
-  NAME : FernanApps
-  EMAIL : fernan.apps@github.com
+  NAME : DSPlayer
+  EMAIL : dsplayer.apps@github.com
   
 jobs:
   build:
@@ -38,7 +40,7 @@ jobs:
       run: |
          cd apks
          sudo apt install -y aapt 
-         aapt dump badging test.apk | grep "VersionName" | sed -e "s/.*versionName='//" -e "s/' .*//"
+         aapt dump badging app-release.apk | grep "VersionName" | sed -e "s/.*versionName='//" -e "s/' .*//"
 
       
    # - name: Pushing to main branch
